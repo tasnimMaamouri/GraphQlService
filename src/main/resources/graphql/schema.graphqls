@@ -1,0 +1,13 @@
+type Query {
+    getMostEmissionsByRegion: CO2Emission
+    getMostEmissionsBySector: [CO2Emission]
+}
+type Mutation {
+    addEmission(region: String, date: String, sector: String, value: Float): CO2Emission
+}
+type CO2Emission {
+    region: String
+    date: String
+    sector: String
+    value: Float
+}
